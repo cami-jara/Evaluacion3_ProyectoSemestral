@@ -1,0 +1,172 @@
+:root{
+  --dark: #16191c;
+  --dark-x: #E5ECF0;
+  --light: #ffffff;
+}
+
+body{
+ font-family: 'Spartan', sans-serif;
+ font-weight: 300;
+ color: var(--light);
+}
+
+.bg-dark {background-color: var(--dark) !important; }
+.bg-dark-x {background-color: var(--dark-x); }
+
+.form-control, .btn{
+  min-height: 3.12rem;
+  line-height: initial;
+}
+
+.col-sm-6{
+  margin-top: -40px;
+}
+
+.h3{
+  font-family: serif;
+}
+
+.img-1{
+  background-image: url('img/casaventa4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.img-2{
+  background-image: url('img/casaventa4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.img-4{
+  border-radius: 0px 200px 200px 200px;
+  box-shadow: 0 15px 15px -5px #000;
+  border: 2px #000;
+  height: 300px;
+  margin: 100px 215px;
+  margin-top: 20px;
+}
+
+.navbar-dark .navbarnav .nav-link.active,
+.navbar-dark .navbarnav .nav-link:hover{
+  color: black;
+}
+
+.inicio-inner{
+  background-image: image("img/portada.jpg");
+  box-shadow: 0 5px 5px -5px #000;
+  opacity: 0 opacity;
+}
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position:absolute;
+  top:38%;
+  z-index: 1;
+  color: white;
+  text-transform: uppercase;
+}
+.caption h1{
+  font-size:  3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: 1rem;
+}
+.caption h3{
+  font-style: 2rem;
+  text-shadow: .1rem .1rem .5rem black;
+}
+
+.h3{
+  font-size: 50px;
+
+}
+/*navbar*/
+ul li {
+list-style-type: none;
+}
+  ul li a {
+    text-decoration: none;
+}
+.navbar{
+  padding: .8rem;
+}
+.navbar-nav li{
+  padding-right: 20px;
+}
+.nav-link{
+  font-size: 15px important;
+}
+
+.narrow{
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 2rem;
+}
+
+.narrow h1{
+  font-size:  2.4rem;
+}
+
+.btn-secondary{
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  border-color: #1EBBA3;
+  background-color: #1EBBA3;
+  color: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus{
+  border-color: #189582;
+  background-color: #189582;
+  color:white;
+}
+
+h2{
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1{
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*principal*/
+html, body{
+  font-family: 'Mukta', sans-serif;
+  color:black;
+}
+
+/*redes sociales*/
+.social a {
+    font-size: 4.5em;
+    padding: 30px;
+  }
+  /*contacto*/
+  article,container-fluid{
+  margin-left:650px;
+  text-align:center;
+  margin-top:-300px;
+  }
+
+  /*Boton-margin*/
+  .boton-margin{
+    margin: 15px;
+  }
+
+  .g-signin2{
+    margin-left: 450px;
+    margin-top: -50px;
+  }
+  .avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
