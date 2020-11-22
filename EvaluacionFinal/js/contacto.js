@@ -1,5 +1,7 @@
 $("#enviar-btn").click(function(){
   let mensajes = $("#mensajes");
+
+    console.log(localStorage);
   let errores = [];
 
   let nombre = $("#nombre-txt").val();
@@ -42,4 +44,8 @@ $("#enviar-btn").click(function(){
         icon: "error",
        });
       }
+
+      localStorage.setItem('contacto', JSON.stringify(contacto));
+   localStorage.setItem('contacto', JSON.stringify(contacto)); 
+   location.href='contactoefectuados.html';
 });
