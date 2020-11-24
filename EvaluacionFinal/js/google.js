@@ -14,8 +14,9 @@ function onSignIn(googleUser) {
       foto_perfil: profile.getImageUrl()
     }
 
-   localStorage.setItem('profile', JSON.stringify(profile)) 
-   localStorage.setItem('profile', JSON.stringify(perfil)) 
+   window.localStorage.setItem('profile', JSON.stringify(profile)) ;
+   window.localStorage.setItem('profile', JSON.stringify(perfil)) ;
+   
    
     console.log(localStorage);
     
@@ -23,8 +24,8 @@ function onSignIn(googleUser) {
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-      localStorage.clear();
-      location.href='login.html';
+      window.localStorage.clear();
+      window.location.href='login.html';
        console.log('User signed out.');
     });
   }

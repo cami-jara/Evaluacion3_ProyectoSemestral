@@ -1,7 +1,6 @@
 $("#enviar-btn").click(function(){
   let mensajes = $("#mensajes");
 
-    console.log(localStorage);
   let errores = [];
 
   let nombre = $("#nombre-txt").val();
@@ -26,11 +25,24 @@ $("#enviar-btn").click(function(){
   }
   if(errores.length == 0){
     let contacto  = {};
-      contacto.nombre = nombre;
-      contacto.apellido = apellido;
-      contacto.correo = correo;
-      contacto.numero = numero;
-      contacto.mensaje = mensaje;
+      contacto.nombre =  document.getElementById('nombre-txt').value;
+      contacto.apellido = document.getElementById('apellido-txt').value;
+      contacto.correo = document.getElementById('correo-txt').value;
+      contacto.numero = document.getElementById('numero-txt').value;
+      contacto.mensaje = document.getElementById('mensaje-txt').value;
+      var contactos_efectuados = []
+    if(!!window.localStorage.getItem("contactos")) {
+        contactos_efectuados = JSON.parse(window.localStorage.getItem('contactos'));
+    }
+    contactos_efectuados.push(contacto)
+    window.localStorage.setItem('contacto', JSON.stringify(contacto));
+    window.localStorage.setItem('contactos', JSON.stringify(contactos_efectuados));
+    location.href='contactoefectuados.html';
+    // if(validarEmail(info_contacto.correo)) {
+    //     console.log("envia la data", info_contacto)
+    // } else {
+    //     alert("el correo está mal escrito")
+    // }
 
      Swal.fire({
          title: "Formulario enviado",
@@ -45,7 +57,4 @@ $("#enviar-btn").click(function(){
        });
       }
 
-      localStorage.setItem('contacto', JSON.stringify(contacto));
-   localStorage.setItem('contacto', JSON.stringify(contacto)); 
-   location.href='contactoefectuados.html';
 });
