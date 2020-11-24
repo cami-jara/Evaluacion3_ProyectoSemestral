@@ -46,14 +46,28 @@
           </ul>
           <div id="profile" class="row" style="display: none;"></div>
           <button class="btn btn-danger">
-          <a href="login.html" onclick="signOut();">Sign out</a></button>
+            <a href="login.html" onclick="signOut();">Sign out</a>
           
         </div>
       </div>
     </nav>
     </header>
 
-
+    <div class="clearfix">
+      <img src="..." class="col-md-6 float-md-right mb-3 ml-md-3" alt="...">
+    
+      <p>
+        Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris paddenstoel nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    
+      <p>
+        Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Id nullam tellus relem amet commodo telemque olemit. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+      </p>
+    
+      <p>
+        Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lantaarnpaal quam venenatis vestibulum. Donec sed odio dui. Maecenas faucibus mollis interdum. Nullam quis risus eget urna salsa tequila vel eu leo. Donec id elit non mi porta gravida at eget metus.
+      </p>
+    </div>
      
 
           <footer>
@@ -121,15 +135,15 @@
     <!-- Option 2: Separate Popper.js and Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
-   <script>
-      function signOut() {
+    
+   
+<script>
+  function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-      localStorage.clear();
-      location.href='login.html';
-       console.log('User signed out.');
+      console.log('User signed out.');
     });
   }
-   </script>
+</script>
   </body>
 </html>

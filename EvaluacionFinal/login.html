@@ -93,8 +93,6 @@
                 <p class="text-center" style="size: 5em; margin: 20px; margin-left: 15px; margin-top: -20px;">O</p>
 
                 <div class="g-signin2" data-onsuccess="onSignIn" ></div>
-                <a href="login.html" onclick="signOut();">Sign out</a></button>
-
               </div>
             </div>
         </div>
@@ -172,5 +170,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
     <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=441669700153077&autoLogAppEvents=1" nonce="lmnEH6ww"></script> -->
+  <script>
+    function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    localStorage.clear();
+    location.href='login.html';
+     console.log('User signed out.');
+      console.log(localStorage);
+  
+});
+}
+  </script>
   </body>
 </html>
