@@ -26,6 +26,26 @@ function testAPI() {                      // Testing Graph API after login.  See
   });
 }
 
+function showData(){
+  FB.api('/me', "GET", {fields: "first_name, last_name, name, picture.width(35).height(35)"}, function(response){
+    console.log(response.name);
+    console.log(response.picture.data.url);
+
+    localStorage.setItem('profile', response.name);
+    localStorage.setItem('profile', response.picture.data.url);
+    console.log(localStorage);
+  }
+  )
+}
+
+FB.logout(function(response) {
+  // Person is now logged out
+  localStorage.clear();
+  let login= document.querySelector("login");
+      login.innerHTML = "";  
+      console.log('User signed out.');
+});
+
 (function(d, s, id){
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id)) {return;}
@@ -41,6 +61,11 @@ if(response.status === 'connected'){
   setElements(false);
  
 }
+window.localStorage.setItem('profile', JSON.stringify(profile)) ;
+   window.localStorage.setItem('profile', JSON.stringify(perfil)) ;
+   
+   
+    console.log(localStorage);
 }
 
 
